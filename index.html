@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CSVJSON</title>
     <meta
       name="description"
@@ -47,17 +48,111 @@
     <link rel="icon" type="image/png" href="images/logo.PNG" />
   </head>
   <body>
-    <div class="container">
-      <input type="radio" name="size" id="json" />
-      <label for="json">JSON</label>
-      <br />
-      <input type="radio" name="size" id="csv" checked="checked" />
-      <label for="csv">CSV</label>
-    </div>
-    <div class="wrapper">
-      <textarea
-        placeholder='Write your CSV here&#10; Sample:&#10; "Header1","Header2","Header3"&#10; "data1","data2",”data3”&#10; "dataA","dataB","dataC"'
-      required></textarea>
+    <div class="main">
+      <!-- about section start -->
+      <section class="about" id="about">
+        <div class="max-width">
+          <div class="about-content">
+            <div class="column left">
+              <img src="images/myfiles.gif" alt="" />
+            </div>
+            <div class="column right">
+              <div class="text">Convert your files</div>
+              <p>
+                We help you convert your files and text between CSV and JSON
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- select file type section start -->
+      <section class="home" id="home">
+        <div class="max-width">
+          <div class="home-content">
+            <div class="text-1">
+              Select the type of file or text to be converted
+            </div>
+            <div class="container-radio">
+              <input type="radio" name="size" id="json" />
+              <label for="json">JSON</label>
+              <br />
+              <input type="radio" name="size" id="csv" checked="checked" />
+              <label for="csv">CSV</label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- select separator type section start -->
+      <section class="services" id="services">
+        <div class="max-width">
+          <h2 class="title">Select the type of file or text to be converted</h2>
+          <div class="serv-content">
+            <div class="btn_convert card">
+              <button><span>Comma (<span style="color: red;"> , </span>)</span></button>
+            </div>
+            <div class="btn_convert card">
+              <button><span> Semicolon (<span style="color: red;"> ; </span>)</span></button>
+            </div>
+            <div class="btn_convert card">
+              <button><span>Dash (<span style="color: red;"> - </span>)</span></button>
+            </div>
+            <div class="btn_convert card">
+              <button><span>Colon (<span style="color: red;"> : </span>)</span></button>
+            </div>
+            <div class="btn_convert card">
+              <button><span>Bar or Pipe (<span style="color: red;"> | </span>)</span></button>
+            </div>
+            <div class="btn_convert card">
+              <button><span>Underscore (<span style="color: red;"> _ </span>)</span></button>
+            </div>
+            <div class="btn_convert card">
+              <button><span>At (<span style="color: red;"> @ </span>)</span></button>
+            </div>
+            <div class="btn_convert card">
+              <button><span>Hash (<span style="color: red;"> # </span>)</span></button>
+            </div>
+            <div class="btn_convert card">
+              <button><span>Asterisk or Star (<span style="color: red;"> * </span>)</span></button>
+            </div>
+            <div class="btn_convert card">
+              <button><span>Percent (<span style="color: red;"> % </span>)</span></button>
+            </div>
+            <div class="btn_convert card">
+              <button><span> Ampersand (<span style="color: red;"> & </span>)</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- add text or upload file section start -->
+      <section class="skills" id="skills">
+        <div class="max-width">
+          <h2 class="title">Write or upload your CSV</h2>
+          <div class="skills-content">
+            <div class="column left">
+              <div class="drag-area">
+                <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                <header>Drag & Drop to Upload File</header>
+                <span>OR</span>
+                <button>Browse File</button>
+                <input type="file" onchange="openFile(event)" hidden />
+              </div>
+            </div>
+            <div class="column right">
+              <div class="container-textarea">
+                <textarea
+                  id="textData"
+                  placeholder=' Write your CSV here&#10; Sample:&#10; "Header1","Header2","Header3"&#10; "data1","data2",”data3”&#10; "dataA","dataB","dataC"'
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <div class="btn_convert">
+              <button><span>Convert data</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+     
     </div>
   </body>
 </html>
